@@ -1,0 +1,115 @@
+Total Score: 115 out of possible 125.
+---------------------------------------------
+
+Code Development Process: 45 possible points.
+---------------------------------------------
+
+(These points are assessed once, on the due date.)
+
+Correct use of Git (15 points).  Are each of the following
+files (or directories) in the correct place in your
+team repository? 
+
+__5_ /  5: tag "iter3" used properly
+__5_ /  5: project/samples/bad_syntax_good_tokens.cff
+           project/samples/abstar.cff
+           project/samples/box.cff
+           project/samples/sumOfSquares.cff
+
+           --rename sample files to use .cff extension
+
+__1_ /  1: project/src/Makefile
+           project/src/extToken.h
+           project/src/extToken.cpp
+           project/src/parseResult.h
+           project/src/parseResult.cpp
+__1_ /  1: project/src/ast_tests.h
+__1_ /  1: project/src/parser.h
+           project/src/parser.cpp 
+           project/src/parser_tests.h
+__1_ /  1: project/lib/cxxtest
+           project/src/readInput.h
+           project/src/readInput.cpp
+           project/src/regex.h
+           project/src/regex.cpp
+           project/src/regex_tests.h
+           project/src/scanner.h
+           project/src/scanner.cpp
+           project/src/scanner_tests.h
+__1_ /  1: project/src/iteration3_work.txt
+
+
+Note that you can name your AST file anything that you want.Thus 
+they are not listed above.
+
+Division of work statement (10 points)
+
+_10_ / 10: A satisfactory division of work statement.
+
+Successful compilation and generation of tests cases. (10 points)
+Each of the following command succeeds with no errors.
+
+__5_ /  5: make ast_tests.cpp
+__5_ /  5: make ast_tests
+Running test cases doesn't result in a segmentation fault. (10 points)
+Test cases may fail, but should not cause the testing framework tocrash.
+
+_10_ / 10: no segmentation faults
+
+
+Passing Test Cases: 80 possible points.
+---------------------------------------
+(These points are assessed at each iteration and thus if you fail to
+pass some test cases now you can get those points back on a later 
+iteration.
+
+__8_ /  8: test_ast_squareMapper is written correctly.
+        It properly calls and tests that
+        ___ / 2: the correct name is reported by the "getName()" 
+        ___ / 2: the correct number of states is reported by 
+              "getNumStates()" 
+        ___ / 2: the correct number variable declarations is 
+              reported by "getNumVarDecls()" 
+        ___ / 2: the correct number variable uses is reported by 
+              "getNumVarUses" 
+_12_ / 12: the code passes the test  test_ast_squareMapper
+
+
+__8_ /  8: test_ast_abstar is written correctly.
+        It properly calls and tests that
+        ___ / 2: the correct name is reported by the "getName()" 
+        ___ / 2: the correct number of states is reported by 
+              "getNumStates()" 
+        ___ / 2: the correct number variable declarations is 
+              reported by "getNumVarDecls()" 
+        ___ / 2: the correct number variable uses is reported by 
+              "getNumVarUses" 
+_12_ / 12: the code passes the test  test_ast_abstar
+
+
+__8_ /  8: test_ast_box is written correctly.
+        It properly calls and tests that
+        ___ / 2: the correct name is reported by the "getName()" 
+        ___ / 2: the correct number of states is reported by 
+              "getNumStates()" 
+        ___ / 2: the correct number variable declarations is 
+              reported by "getNumVarDecls()" 
+        ___ / 2: the correct number variable uses is reported by 
+              "getNumVarUses" 
+_12_ / 12: the code passes the test  test_ast_box
+
+
+__8_ /  8: test_ast_sumOfSquares is written correctly.
+        It properly calls and tests that
+        ___ / 2: the correct name is reported by the "getName()" 
+        ___ / 2: the correct number of states is reported by 
+              "getNumStates()" 
+        ___ / 2: the correct number variable declarations is 
+              reported by "getNumVarDecls()" 
+        ___ / 2: the correct number variable uses is reported by 
+              "getNumVarUses" 
+_12_ / 12: the code passes the test  test_ast_sumOfSquares
+
+
+
+

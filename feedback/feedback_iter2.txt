@@ -1,0 +1,71 @@
+Possible points: 80.
+
+Code Development Process: 40 possible points.
+---------------------------------------------
+
+(These points are assessed once, on the due date.)
+
+Correct use of Git (10 points).  Are each of the following
+files (or directories) in the correct place in your
+team repository? 
+
+__5_ /  5:  tag "iter2" used properly
+__0_ /  1: project/samples/bad_syntax_good_tokens.stm
+           project/samples/abstar.stm
+           project/samples/box.stm
+           project/samples/sumOfSquares.stm
+           project/src/Makefile
+          missing files: samples/box.stm samples/sumOfSquares.stm 
+__1_ /  1: project/src/extToken.h
+           project/src/extToken.cpp
+           project/src/parseResult.h
+           project/src/parseResult.cpp
+__1_ /  1: project/src/parser.h
+           project/src/parser.cpp 
+           project/src/parser_tests.h
+__1_ /  1: project/lib/cxxtest
+           project/src/readInput.h
+           project/src/readInput.cpp
+           project/src/regex.h
+           project/src/regex.cpp
+           project/src/regex_tests.h
+           project/src/scanner.h
+           project/src/scanner.cpp
+           project/src/scanner_tests.h
+__1_ /  1: project/src/iteration2_work.txt
+
+
+Division of work statement (10 points possible).
+
+_10_ / 10: An satisfactory  division of work statement.
+
+
+Successful compilation and generation of tests cases.  (10 points)
+Each of the following commands should succeed with no errors.
+
+__4_ /  4: make parser.o.cpp
+__3_ /  3: make parser_tests.cpp
+__3_ /  3: make parser_tests
+
+
+Running test cases doesn't result in a segmentation fault. (10 possible points)
+Test cases may fail, but should not cause the testing framework to
+crash. 
+
+_10_ / 10: No segmentation faults
+
+
+
+Passing Test Cases: 40 points.
+------------------------------
+(These points are assessed at each iteration and thus if you fail to
+pass some test cases now you can get those points back on a later
+iteration.)
+
+__5_ /  5: passes the test  test_parser_bad_syntax
+__5_ /  5: passes the test  test_parser_exprs
+_10_ / 10: passes the test  test_parser_abstar
+_10_ / 10: passes the test  test_parser_box
+_10_ / 10: passes the test  test_parser_sumOfSquares
+
+

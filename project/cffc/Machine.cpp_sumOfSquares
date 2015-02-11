@@ -1,0 +1,59 @@
+// Generated Machine.cpp for SumOfSquares
+
+#include "Machine.h"
+using namespace std ;
+SumOfSquares_Machine::SumOfSquares_Machine (int argc, char **argv) { 
+   runTime = new IntegerComputer(argc, argv) ; 
+   // Creating state objects 
+   state_Start = new State_Start(this) ; 
+   state_Compute = new State_Compute(this) ; 
+} 
+
+void SumOfSquares_Machine::go() { 
+   runTime->run( state_Start ); 
+} 
+
+// Concrete machine states
+MachineState *State_Start::enter() {
+   if ( true ) { 
+      stateMachine->Var_i = 0 ;
+      stateMachine->Var_s = 0 ;
+
+      return stateMachine->state_Compute ; 
+   } 
+
+}
+
+State_Start::State_Start ( SumOfSquares_Machine *m ) {
+   stateMachine = m ; 
+}
+
+
+MachineState *State_Compute::enter() {
+   if ( (stateMachine->Var_i <= stateMachine->runTime->input) ) { 
+      stateMachine->Var_s = (stateMachine->Var_s + (stateMachine->Var_i * stateMachine->Var_i)) ;
+      stateMachine->Var_i = (stateMachine->Var_i + 1) ;
+
+      return stateMachine->state_Compute ; 
+   } 
+
+   if ( true ) { 
+      stateMachine->runTime->output = stateMachine->Var_s ;
+
+      return NULL ;   } 
+
+}
+
+State_Compute::State_Compute ( SumOfSquares_Machine *m ) {
+   stateMachine = m ; 
+}
+
+
+
+
+// A 'main' program to run the state machine.
+int main (int argc, char **argv) { 
+  SumOfSquares_Machine *SumOfSquares = new SumOfSquares_Machine (argc, argv) ; 
+  SumOfSquares->go() ; 
+} 
+

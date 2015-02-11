@@ -1,0 +1,28 @@
+name: SumOfSquares ;
+platform: IntegerComputer ;
+// provides int input as sensor 
+// and int output as actuator 
+
+/* i := 0 ;
+   s := 0 ;
+   while i <= input do // fixed. was incorrectly i<input before
+     s := s + i * i ;
+     i := i + 1 ;
+   end 
+   output := i ;
+*/
+
+int i ;
+int s ;
+
+initial state: Start {
+  goto Compute when true 
+    performing { i := 0; s := 0 ; } ;
+} 
+
+state: Compute {
+  goto Compute when i <= input 
+    performing { s := s + i * i;  i := i + 1; } ;
+  exit when true
+    performing { output := s; } ;
+}

@@ -1,0 +1,35 @@
+// Generated Machine.h for SquareMapper
+
+#include "RunTime.h"
+
+// Declarations of the State classes
+class State_Square ; 
+
+
+class SquareMapper_Machine { 
+   public: 
+   SquareMapper_Machine( int argc, char **argv ) ; 
+
+   void go() ;
+
+   IntegerStreamComputer *runTime ;
+
+   // Machine states
+   State_Square *state_Square ; 
+
+} ;
+
+class SquareMapperState : public MachineState {
+   public: 
+   SquareMapper_Machine *stateMachine ; 
+} ; 
+
+// Concrete machine states
+class State_Square : public SquareMapperState { 
+   public:
+   MachineState *enter () ;
+   State_Square ( SquareMapper_Machine *m ) ;
+} ;
+
+
+

@@ -1,0 +1,37 @@
+// Generated Machine.cpp for SquareMapper
+
+#include "Machine.h"
+using namespace std ;
+SquareMapper_Machine::SquareMapper_Machine (int argc, char **argv) { 
+   runTime = new IntegerStreamComputer(argc, argv) ; 
+   // Creating state objects 
+   state_Square = new State_Square(this) ; 
+} 
+
+void SquareMapper_Machine::go() { 
+   runTime->run( state_Square ); 
+} 
+
+// Concrete machine states
+MachineState *State_Square::enter() {
+   if ( true ) { 
+      stateMachine->runTime->output = (stateMachine->runTime->input * stateMachine->runTime->input) ;
+
+      return stateMachine->state_Square ; 
+   } 
+
+}
+
+State_Square::State_Square ( SquareMapper_Machine *m ) {
+   stateMachine = m ; 
+}
+
+
+
+
+// A 'main' program to run the state machine.
+int main (int argc, char **argv) { 
+  SquareMapper_Machine *SquareMapper = new SquareMapper_Machine (argc, argv) ; 
+  SquareMapper->go() ; 
+} 
+

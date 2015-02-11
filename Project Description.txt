@@ -1,0 +1,16 @@
+Course Project 
+Authors: Harshita Shyam and Chris Hasemann 
+
+We built a language translator mapping a small domain-specific language for robots down to C or C++ for execution. It was done in four iterations. The details of each iteration is provided below.
+
+Iteration 1 - The Scanner
+For the first iteration of the project, we built a scanner that takes as input a sample program in our programming language, recognizes the tokens in the program and returns them in a linked list. Then we wrote several test cases to demonstrate that our code works properly. In fact, we did not write a main function to create an executable translator for this iteration. All execution of our scanner code will be done via test cases. 
+
+Iteration 2 - The Parser
+For the second iteration of the project, we incorporated a recursive descent top-down parser into our project. Then we extended our existing Makefile so that the new code is compiled and the new tests are executed by the run-tests target.
+
+Iteration 3 - Building abstract syntax trees
+For the third iteration of the project, we designed the classes that will implement abstract syntax trees. Then we modifed the parser so that as it recognizes a syntactically valid C-FishFish program it will construct the corresponding abstract syntax tree (AST). We then implemented a few simple methods that can be used to generate a simple summary of the structure of the program. In the next iteration, we will be adding methods to translate C-FishFish programs to C++. 
+
+Iteration 4 - Code Generation
+For the final iteration of the project, we implemented two methods cppCode_h and cppCode_cpp on our Program class so that they generate, respectively, a "Machine.h" and a "Machine.cpp" file that implement the behavior of a C-FishFish program. Then we used the provided Makefiles, Makefile_Robot and Makefile_Tests to ensure that our C-FishFish translator is working correctly. This was done in two phases. In phase one, we performed the tasks above to compile C-FishFish programs that do not have any declarations in them (programs squareMapper.cff and abstar.cff). In phase two, we extended our compiler to handle declarations such as those found in the other two programs (sumOfSquares.cff and box.cff).
