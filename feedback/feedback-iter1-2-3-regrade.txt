@@ -1,8 +1,0 @@
-
-Results from running test cases from Iteration 1, 2, and 3.
-
-Iteration 1: all test cases passed.
-
-Iteration 2: all test cases passed.
-
-Iteration 3: all test cases passed.
